@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Sci-Fi Hand Battle - A fun and interactive Rock, Paper, Scissors, Lizard, Spock game.">
+    <meta name="keywords" content="Sci-Fi Hand Battle, Rock Paper Scissors, Lizard Spock, game, play">
+    <title>Fingers of Fortune</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Fingers of Fortune</h1>
+        </header>
+        <main>
+            <div id="result" class="result" aria-live="polite" role="status">Choose an option!</div>
+            <div class="options" role="group" aria-label="Game Options">
+                <button onclick="playGame('rock'); playSound();" class="moveable" aria-label="Rock">
+                    <img src="assets/rock.jpg" alt="Rock" loading="lazy">
+                    <span>Rock</span>
+                </button>
+                <button onclick="playGame('paper'); playSound();" class="moveable" aria-label="Paper">
+                    <img src="assets/paper.jpg" alt="Paper" loading="lazy">
+                    <span>Paper</span>
+                </button>
+                <button onclick="playGame('scissors'); playSound();" class="moveable" aria-label="Scissors">
+                    <img src="assets/scissors.jpg" alt="Scissors" loading="lazy">
+                    <span>Scissors</span>
+                </button>
+                <button onclick="playGame('lizard'); playSound();" class="moveable" aria-label="Lizard">
+                    <img src="assets/lizard.jpg" alt="Lizard" loading="lazy">
+                    <span>Lizard</span>
+                </button>
+                <button onclick="playGame('spock'); playSound();" class="moveable" aria-label="Spock">
+                    <img src="assets/spock.jpg" alt="Spock" loading="lazy">
+                    <span>Spock</span>
+                </button>
+            </div>
+            <div class="level-selection">
+                <label for="level">Choose a Level:</label>
+                <select id="level" aria-label="Select Game Difficulty">
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                </select>
+            </div>
+            <div class="scoreboard">
+                <div>Wins: <span id="wins">0</span></div>
+                <div>Losses: <span id="losses">0</span></div>
+                <div>Ties: <span id="ties">0</span></div>
+            </div>
+            <button class="reset-btn" onclick="resetGame()">Reset Scores</button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
